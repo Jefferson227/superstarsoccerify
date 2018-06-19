@@ -1,14 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Superstar Soccerify
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item
+      *ngFor="let button of buttons"
+      (click)="playAudio(button.audioTitle)">{{button.title}}</ion-item>
+  </ion-list>
 </ion-content>
